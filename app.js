@@ -2,16 +2,16 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const express = require("express");
 const app = express();
-const db = require('./config/keys').mongoURI;
+// const db = require('./config/keys').mongoURI;
 const users = require("./routes/api/users");
 const tweets = require("./routes/api/tweets");
 const User = require("./models/User");
 const bodyParser = require("body-parser");
 
-mongoose
-  .connect(db, { useNewUrlParser: true, useUnifiedTopology: true})
-  .then(() => console.log("Connected to MongoDB successfully"))
-  .catch(err => console.log(err));
+mongoose;
+  // .connect(db, { useNewUrlParser: true, useUnifiedTopology: true})
+  // .then(() => console.log("Connected to MongoDB successfully"))
+  // .catch(err => console.log(err));
   
 app.use(bodyParser.urlencoded({
   extended: false
